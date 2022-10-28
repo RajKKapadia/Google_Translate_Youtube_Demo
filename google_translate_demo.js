@@ -2,7 +2,7 @@ const {Translate} = require('@google-cloud/translate').v2;
 require('dotenv').config();
 
 // Your credentials
-const CREDENTIALS = JSON.parse(process.env.CREDENTIALS);
+const CREDENTIALS = require('./youtubedemo-rwcl-0663f7394d57.json');
 
 // Configuration for the client
 const translate = new Translate({
@@ -26,7 +26,7 @@ const detectLanguage = async (text) => {
 //         console.log(res);
 //     })
 //     .catch((err) => {
-//         console.log(error);
+//         console.log(err);
 //     });
 
 const translateText = async (text, targetLanguage) => {
